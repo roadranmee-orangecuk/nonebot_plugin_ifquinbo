@@ -29,5 +29,5 @@ def cc() -> str:
         return '勃了勃了，'+title.replace('【Quin】', '')
 
 
-if __name__ == '__main__':
-    cc()
+# if __name__ == '__main__':
+#     cc()
