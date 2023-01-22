@@ -9,6 +9,7 @@ headers = {
 
 def cc() -> str:
     url = 'https://vapi.cc.163.com/video_play_url/361433'
+    # 该接口返回一个包含直播信息的json字符串，包含名为data的键且当其值为no live时则直播未开始
     res_status = requests.get(url=url, headers=headers, timeout=3)
     res_status.encoding = 'utf-8'
     json_status = res_status.text
