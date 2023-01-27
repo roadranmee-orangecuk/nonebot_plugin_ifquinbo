@@ -14,7 +14,6 @@ def cc() -> str:
     res_status.encoding = 'utf-8'
     json_status = res_status.text
     dict_status = json.loads(json_status)
-    print(dict_status)
     try:
         if dict_status['data'] == 'no live':
             return '没勃，摸了'
@@ -28,7 +27,3 @@ def cc() -> str:
         title = tree.xpath(
             '//div[@class="js-onlive-title-normal nick onlive-setting-name"]/text()')[0]
         return '勃了勃了，'+title.replace('【Quin】', '')
-
-
-# if __name__ == '__main__':
-#     cc()
